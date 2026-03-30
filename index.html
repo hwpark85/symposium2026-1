@@ -24,7 +24,6 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
 
   body {
@@ -48,11 +47,7 @@
     from { width: 0; }
     to { width: 48px; }
   }
-  @keyframes expandWidthFull {
-    from { width: 0; }
-    to { width: 100%; }
-  }
-  @keyframes goldShimmer {
+  @keyframes shimmer {
     0% { background-position: -200% center; }
     100% { background-position: 200% center; }
   }
@@ -83,9 +78,7 @@
   /* ─── STICKY NAV ─── */
   .sticky-nav {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 0; left: 0; right: 0;
     z-index: 1000;
     background: var(--navy);
     border-bottom: 2px solid var(--burgundy);
@@ -283,10 +276,8 @@
   .hero-cta::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
     transition: left 0.5s ease;
   }
@@ -297,16 +288,14 @@
     box-shadow: 0 8px 24px rgba(123,18,48,0.4);
   }
 
-  .hero-cta:hover::after {
-    left: 100%;
-  }
+  .hero-cta:hover::after { left: 100%; }
 
   /* ─── BURGUNDY STRIP ─── */
   .accent-strip {
     background: var(--burgundy);
     background-image: linear-gradient(90deg, var(--burgundy-deep) 0%, var(--burgundy) 40%, var(--burgundy-light) 60%, var(--burgundy) 100%);
     background-size: 200% 100%;
-    animation: goldShimmer 5s ease-in-out infinite;
+    animation: shimmer 5s ease-in-out infinite;
     padding: 16px 32px;
     text-align: center;
   }
@@ -370,8 +359,7 @@
 
   .facilitator-badge {
     flex-shrink: 0;
-    width: 56px;
-    height: 56px;
+    width: 56px; height: 56px;
     background: var(--burgundy);
     color: var(--white);
     display: flex;
@@ -479,9 +467,7 @@
     color: var(--text-mid);
   }
 
-  .session-speaker .org {
-    color: var(--text-light);
-  }
+  .session-speaker .org { color: var(--text-light); }
 
   .session.reveal-left:nth-child(1) { transition-delay: 0s; }
   .session.reveal-left:nth-child(2) { transition-delay: 0.14s; }
@@ -513,10 +499,7 @@
     position: relative;
   }
 
-  .why-list {
-    list-style: none;
-    position: relative;
-  }
+  .why-list { list-style: none; position: relative; }
 
   .why-list li {
     font-size: 15px;
@@ -530,10 +513,8 @@
   .why-list li::before {
     content: '';
     position: absolute;
-    left: 0;
-    top: 10px;
-    width: 6px;
-    height: 6px;
+    left: 0; top: 10px;
+    width: 6px; height: 6px;
     background: var(--burgundy-light);
     transition: transform 0.3s ease, background 0.3s ease;
   }
@@ -569,8 +550,7 @@
   .quote-section::before {
     content: '\201C';
     position: absolute;
-    top: 12px;
-    left: 50%;
+    top: 12px; left: 50%;
     transform: translateX(-50%);
     font-size: 72px;
     color: var(--burgundy);
@@ -588,9 +568,7 @@
     position: relative;
   }
 
-  .quote-text .em {
-    color: var(--burgundy);
-  }
+  .quote-text .em { color: var(--burgundy); }
 
   /* ─── NOTICE ─── */
   .notice-section {
@@ -629,17 +607,13 @@
   .notice-list li::before {
     content: '';
     position: absolute;
-    left: 0;
-    top: 11px;
-    width: 4px;
-    height: 4px;
+    left: 0; top: 11px;
+    width: 4px; height: 4px;
     background: var(--burgundy);
     transition: transform 0.3s ease;
   }
 
-  .notice-list li:hover::before {
-    transform: scale(1.8);
-  }
+  .notice-list li:hover::before { transform: scale(1.8); }
 
   /* ─── TRANSIT ─── */
   .transit-section {
@@ -665,9 +639,7 @@
     margin-bottom: 16px;
   }
 
-  .transit-route strong {
-    color: var(--text-dark);
-  }
+  .transit-route strong { color: var(--text-dark); }
 
   .transit-note {
     font-size: 13px;
@@ -681,7 +653,6 @@
     text-align: center;
     padding: 64px 32px;
     margin-bottom: 56px;
-    position: relative;
   }
 
   .reg-section .label {
@@ -739,10 +710,8 @@
   .reg-btn::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
     transition: left 0.5s ease;
   }
@@ -754,9 +723,7 @@
     animation: none;
   }
 
-  .reg-btn:hover::after {
-    left: 100%;
-  }
+  .reg-btn:hover::after { left: 100%; }
 
   .reg-sub {
     margin-top: 20px;
@@ -878,11 +845,9 @@
       </div>
     </div>
 
-    <!-- HERO CTA -->
     <div class="hero-cta-wrap">
       <a href="https://buly.kr/1y0RBlE" target="_blank" rel="noopener" class="hero-cta">참가 신청하기</a>
     </div>
-
   </div>
 </section>
 
@@ -893,7 +858,6 @@
 <!-- MAIN CONTENT -->
 <div class="content">
 
-  <!-- ABOUT -->
   <div class="section-label reveal">About</div>
   <h2 class="section-title reveal">이커머스 시장을 주도하는<br>Super 셀러의 핵심 노하우</h2>
   <p class="section-desc reveal">
@@ -993,7 +957,7 @@
     <p class="seats-notice">좌석 한정 / 선착순 마감</p>
     <a href="https://buly.kr/1y0RBlE" target="_blank" rel="noopener" class="reg-btn">참가 신청하기</a>
     <p class="reg-sub">
-      문의 : <a href="/cdn-cgi/l/email-protection#ceabacafa2bda1a5a6bb8ea0afb8abbce0ada1a3"><span class="__cf_email__" data-cfemail="ff9a9d9e938c9094978abf919e899a8dd19c9092">[email&#160;protected]</span></a>
+      문의 : <a href="mailto:ebalsokhu@naver.com">ebalsokhu@naver.com</a>
     </p>
   </div>
 
@@ -1005,15 +969,29 @@
   <div class="footer-dept reveal">E-Commerce MBA</div>
   <div class="footer-info reveal">
     서울특별시 동대문구 경희대로 26 경희대학교 경영대학원 오비스홀 151호<br>
-    문의 : <a href="/cdn-cgi/l/email-protection#f99c9b98958a9692918cb997988f9c8bd79a9694"><span class="__cf_email__" data-cfemail="385d5a59544b5753504d7856594e5d4a165b5755">[email&#160;protected]</span></a>
+    문의 : <a href="mailto:ebalsokhu@naver.com">ebalsokhu@naver.com</a>
   </div>
   <div class="footer-copy">
     &copy; 2026 Kyung Hee University Graduate School of Business. All Rights Reserved.
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   document.addEventListener('DOMContentLoaded', function() {
-    // Intersection Observer for scroll animations
     var observer = new IntersectionObserver(function(entries) {
-      entries.forEach
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -50px 0px', threshold: 0.12 });
+
+    document.querySelectorAll('.reveal, .reveal-left').forEach(function(el) {
+      observer.observe(el);
+    });
+  });
+</script>
+
+</body>
+</html>
